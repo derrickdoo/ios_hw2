@@ -7,8 +7,12 @@
 //
 
 #import "NewsViewController.h"
+#import "NewsViewController.h"
+#import "MoreViewController.h"
 
 @interface NewsViewController ()
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 
@@ -23,10 +27,21 @@
     return self;
 }
 
+- (void)viewLoaded {
+    [self.spinner stopAnimating];
+    self.scrollView.hidden = NO;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    //self.navigationItem.title = @"News Feed";
+    
+    self.scrollView.hidden = YES;
+    [self performSelector:@selector(viewLoaded) withObject:nil afterDelay:2];
+    
+    self.navigationController.view.backgroundColor = [UIColor redColor];
 }
 
 - (void)didReceiveMemoryWarning
