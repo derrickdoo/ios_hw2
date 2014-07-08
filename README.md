@@ -14,3 +14,5 @@ Facebook feed
 - Navigation bar should have the search button and messages button.
 - Immediately after launch, display the loading indicator.
 After 2 seconds, show the feed, which is a long image in a scrollable view.
+
+walkthrough: https://raw.githubusercontent.com/derrickdoo/ios_hw2/master/walkthrough.gif
