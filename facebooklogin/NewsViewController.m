@@ -41,7 +41,7 @@
     self.scrollView.hidden = YES;
     [self performSelector:@selector(viewLoaded) withObject:nil afterDelay:2];
     
-    self.navigationController.view.backgroundColor = [UIColor redColor];
+    //self.navigationController.view.backgroundColor = [UIColor redColor];
 }
 
 - (void)didReceiveMemoryWarning
